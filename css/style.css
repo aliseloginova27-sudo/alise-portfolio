@@ -534,7 +534,7 @@ footer img{width:15px;height:15px;opacity:.7;}
    ========================================================= */
 .about-hero{
   max-width:var(--max);margin:0 auto;padding:20px 40px 0;
-  display:grid;grid-template-columns:1fr 0.9fr;gap:60px;align-items:center;
+  display:grid;grid-template-columns:1fr 0.6fr;gap:60px;align-items:center;
 }
 .about-hero .kicker{font-size:13px;color:var(--accent);font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin:0 0 14px;}
 .about-hero h1{font-size:30px;font-weight:600;line-height:1.5;margin:0 0 28px;color:var(--ink);}
