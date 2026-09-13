@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Browser Extension for LinkedIn Recruiter | Alise Loginova</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  /* process-track pills are now real links — page-scoped so the shared stylesheet stays untouched */
+  .process-track a{
+    font-size:12.5px;font-weight:600;color:var(--ink-soft);
+    background:var(--card);border:1px solid var(--line);
+    padding:8px 16px;border-radius:100px;
+    text-decoration:none;
+    transition:color .15s ease, border-color .15s ease, background .15s ease;
+  }
+  .process-track a:hover{color:var(--accent);border-color:var(--accent);}
+  .process-track a.current{color:var(--accent);border-color:var(--accent);background:rgba(236,91,71,0.07);}
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <a class="logo" href="../index.html">A.L.</a>
+  <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  <nav class="links">
+    <a href="../index.html" class="active">WORK</a>
+    <a href="../about.html">ABOUT</a>
+    <a href="../index.html#contact">CONTACT</a>
+  </nav>
+</header>
+
+<div class="hero reveal">
+  <p class="breadcrumb"><a href="../index.html">Work</a> &nbsp;/&nbsp; LinkedIn Recruiter extension</p>
+  <h1>Develop Diverse browser extension for LinkedIn Recruiter</h1>
+  <span class="tag">UX/UI Design</span>
+</div>
+
+<div class="top-grid">
+  <div class="reveal">
+    <div class="label">Overview</div>
+    <p>As part of the main <a class="btn-text" style="border:none;padding:0;" href="https://www.developdiverse.com/product/" target="_blank" rel="noopener">Develop Diverse product</a>, our team developed a browser integration that could be used by Hiring Managers or Recruiters within the LinkedIn Recruiter platform. I supported the project by taking part in the entire design process, delivering the final high-fidelity prototype and testing ideas with users.</p>
+    <p>The extension mirrors the core functionality of the main app: scanning input text and highlighting biased phrases and words, suggesting non-discriminating alternatives, and providing details about the text's inclusivity level.</p>
+  </div>
+  <div class="reveal">
+    <div class="label">Methods &amp; tools</div>
+    <ul class="plain-list">
+      <li>User survey</li>
+      <li>Sketching</li>
+      <li>Prototyping</li>
+      <li>Usability testing</li>
+      <li>Mockups</li>
+      <li>Figma</li>
+      <li>FlowMapp</li>
+    </ul>
+  </div>
+</div>
+
+<div class="full-figure reveal">
+  <div class="frame">
+    <img src="https://cdn.prod.website-files.com/622387faca9a232611ffaea9/623890ae81d2e4f742674463_DD%20linkedin%20browser%20extension.png" alt="Develop Diverse browser extension for LinkedIn Recruiter">
+  </div>
+</div>
+
+<div class="section-title reveal">
+  <h2>The process</h2>
+</div>
+<div class="full-figure reveal" style="padding-top:24px;">
+  <div class="frame">
+    <img src="https://cdn.prod.website-files.com/622387faca9a232611ffaea9/623740c23f25e89feb6a5ca1_UX%20Design%20Process.png" alt="Double Diamond UX design process diagram">
+  </div>
+</div>
+
+<div class="process-track reveal" id="process-track">
+  <a href="#discover" class="current" data-stage="discover">Discover</a>
+  <a href="#define" data-stage="define">Define</a>
+  <a href="#ideate" data-stage="ideate">Ideate</a>
+  <a href="#design" data-stage="design">Design</a>
+  <a href="#test" data-stage="test">Test</a>
+  <a href="#iterate" data-stage="iterate">Iterate</a>
+</div>
+
+<div class="section-title reveal" id="discover">
+  <div class="eyebrow">01</div>
+  <h2>Discover</h2>
+</div>
+
+<div class="row reveal">
+  <div class="label">Problem</div>
+  <div class="content">
+    <p>Users needed to perform extra steps to make their biased texts (job ads, messages, emails) more inclusive: copy the initial text from the original source, paste it into the web app's editor, scan for discriminating phrases, replace them with non-discriminating alternatives, then copy the optimized text back (e.g. to a careers page, document, or email). This process was time- and effort-consuming, with steps that could be redundant.</p>
+  </div>
+</div>
+
+<div class="row reveal">
+  <div class="label">Solution</div>
+  <div class="content">
+    <p>To make inclusive language ubiquitous, the solution needed to live not only in the main web app but wherever our users were writing and communicating. The higher-level idea was to create a seamless browser extension that would be easily accessible and support users with inclusive writing rapidly, avoiding unnecessary actions.</p>
+  </div>
+</div>
+
+<div class="row reveal">
+  <div class="label">Desk research</div>
+  <div class="content">
+    <p>To understand practices in the existing market, I researched different browser extensions — both competitors and non-related products — focusing on those that scan text and offer alternatives or corrections. Grammarly stood out as one of the biggest writing-assistant solutions on the market and served as a good source of inspiration for interface and interaction design.</p>
+    <div class="image-grid-2">
+      <figure style="margin:0;">
+        <div class="frame"><img src="https://cdn.prod.website-files.com/622387faca9a232611ffaea9/62374ab9e71a95e27c9bfee8_export_canvas_exploration-and-ideas-inspiration-220317_1903.png" alt="Milanote board — competitor analysis"></div>
+        <p class="caption">Milanote board — competitor analysis</p>
+      </figure>
+      <figure style="margin:0;">
+        <div class="frame"><img src="https://cdn.prod.website-files.com/622387faca9a232611ffaea9/62374ab90b4544d01fd3a1d9_export_canvas_grammarly-extension-approach-220317_1902.png" alt="Milanote board — Grammarly analysis"></div>
+        <p class="caption">Milanote board — Grammarly analysis</p>
+      </figure>
+    </div>
+  </div>
+</div>
+
+<div class="row reveal">
+  <div class="label">User survey</div>
+  <div class="content">
+    <p>To understand user expectations and desires early on, some of our customers were asked to fill in a questionnaire.</p>
+    <div class="callout">
+      <div class="sub-label">Key survey findings</div>
+      <ul>
+        <li>Users would like to use the browser extension with LinkedIn, email or other recruitment tools they use at work</li>
+        <li>Users expect the extension to work more efficiently than the main app, avoiding copy/pasting</li>
+        <li>Users want to be able to turn the extension off or on when necessary</li>
+        <li>There's a list of core functionalities users want when using the extension</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="row reveal">
+  <div class="label">Scope</div>
+  <div class="content">
+    <p>After team meetings, we realized a generic browser extension functioning on all websites wasn't a good solution due to legal risk — it might not be secure when it comes to sensitive data like passwords, bank details or personal data.</p>
+    <p>We narrowed the scope to specific platforms Recruiters or Hiring Managers (our primary users) use daily. LinkedIn Recruiter was chosen as the first platform to develop the integration for, a decision informed by the survey results as well as technical limitations and feasibility discussed during scope meetings.</p>
+  </div>
+</div>
+
+<div class="section-title reveal" id="define">
+  <div class="eyebrow">02</div>
+  <h2>Define</h2>
+</div>
+
+<div class="row reveal">
+  <div class="label">Use cases</div>
+  <div class="content">
+    <ul class="numbered">
+      <li>Unbias LinkedIn Recruiter / LinkedIn InMail messages to candidates from recruiters or hiring managers</li>
+      <li>Unbias job descriptions in LinkedIn Recruiter projects, in collaboration with team members</li>
+    </ul>
+  </div>
+</div>
+
+<div class="row reveal">
+  <div class="label">User stories</div>
+  <div class="content">
+    <ul class="numbered">
+      <li>As a user, I can disable the extension per session if I don't want it switched on (default is on)</li>
+      <li>As a user, I can see highlighted biased words, options to replace them, and an explanation of why a word is biased</li>
+      <li>As a user, I want to see the score of my message, and possibly more information about it</li>
+      <li>As a user, I have an option to change the text language and text type in the extension settings</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section-title reveal" id="ideate">
+  <div class="eyebrow">03</div>
+  <h2>Ideate</h2>
+</div>
+
+<div class="row reveal">
+  <div class="label">Essential features</div>
+  <div class="content">
+    <ul>
+      <li>Highlighted words and phrases</li>
+      <li>A list of alternatives to replace biased words</li>
+      <li>Explanation on why a word or phrase is biased</li>
+      <li>Score indicator showing how inclusive the text is</li>
+      <li>Information on how the score is calculated (link to a web page)</li>
+      <li>Inclusion Indicator showing how discouraging the text can sound to certain social groups</li>
+    </ul>
+  </div>
+</div>
+
+<div class="row reveal">
+  <div class="label">User flow</div>
+  <div class="content">
+    <figure style="margin:0;">
+      <div class="frame"><img src="https://cdn.prod.website-files.com/622387faca9a232611ffaea9/6237b04aa318f37dfa24436b_Linkedin%20Recruiter%20integration%20user%20flow.png" alt="LinkedIn Recruiter integration user flow"></div>
+    </figure>
+  </div>
+</div>
+
+<div class="section-title reveal" id="design">
+  <div class="eyebrow">04</div>
+  <h2>Design</h2>
+</div>
+
+<div class="row reveal">
+  <div class="label">Sketching</div>
+  <div class="content">
+    <figure style="margin:0;">
+      <div class="frame"><img src="https://cdn.prod.website-files.com/622387faca9a232611ffaea9/6238871ec4381ec9faf8f47c_IMG_20220321_150831.jpeg" alt="Early sketches of the extension interface"></div>
+    </figure>
+  </div>
+</div>
+
+<div class="row reveal">
+  <div class="label">Wireframes</div>
+  <div class="content">
+    <div class="image-grid-2">
+      <div class="frame"><img src="https://cdn.prod.website-files.com/622387faca9a232611ffaea9/62387edccad42d7627c06827_BE%20wireframe%201.png" alt="Wireframe 1"></div>
+      <div class="frame"><img src="https://cdn.prod.website-files.com/622387faca9a232611ffaea9/6238885bf4dd5d9c7b1a922a_BE%20wireframe%204.png" alt="Wireframe 4"></div>
+      <div class="frame"><img src="https://cdn.prod.website-files.com/622387faca9a232611ffaea9/62387edc35a32101516e03a7_BE%20wireframe%202.png" alt="Wireframe 2"></div>
+      <div class="frame"><img src="https://cdn.prod.website-files.com/622387faca9a232611ffaea9/62387edd96f9c0a549862fd9_BE%20wireframe%203.png" alt="Wireframe 3"></div>
+    </div>
+  </div>
+</div>
+
+<div class="row reveal">
+  <div class="label">Mockups</div>
+  <div class="content">
+    <p>Due to an NDA I signed when working for the company, I'm not able to reveal all interface details, except those publicly available. Some elements below are replaced with lines or shapes.</p>
+    <div class="image-grid-2">
+      <div class="frame"><img src="https://cdn.prod.website-files.com/622387faca9a232611ffaea9/6238d48cbb05181e9ffbf98f_Frame%2023.png" alt="Mockup"></div>
+      <div class="frame"><img src="https://cdn.prod.website-files.com/622387faca9a232611ffaea9/6238d48cddac6d0260371b83_Frame%2022.png" alt="Mockup"></div>
+    </div>
+    <figure>
+      <div class="frame"><img src="https://cdn.prod.website-files.com/622387faca9a232611ffaea9/62388ec99aaf70064f54fccf_Frame%2021.png" alt="Mockup"></div>
+    </figure>
+  </div>
+</div>
+
+<div class="row reveal">
+  <div class="label">Interactive prototype</div>
+  <div class="content">
+    <figure style="margin:0;">
+      <div class="frame"><img src="https://cdn.prod.website-files.com/622387faca9a232611ffaea9/62388f9c83f74d2b9b388edb_Screenshot%202022-03-21%20at%2015.44.50.png" alt="Interactive prototype screenshot"></div>
+    </figure>
+  </div>
+</div>
+
+<div class="section-title reveal" id="test">
+  <div class="eyebrow">05</div>
+  <h2>Test</h2>
+</div>
+
+<div class="row reveal">
+  <div class="label">Usability testing</div>
+  <div class="content">
+    <p>Moderated usability testing was conducted with 5 people — 2 internal and 3 external. The external users were company clients who already used the main app and use LinkedIn Recruiter in their work.</p>
+    <div class="callout">
+      <div class="sub-label">Test goals</div>
+      <ul>
+        <li>Determine which of the two proposed flows (minimal or extended) is preferred by users</li>
+        <li>Find out if people understand how to use the extension</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="row reveal">
+  <div class="label">User tasks</div>
+  <div class="content">
+    <ul class="numbered">
+      <li>Learn why your InMail message is not inclusive and what can be done to improve it</li>
+      <li>Find out which social groups are discouraged by this message</li>
+      <li>Pick the first biased phrase and learn why it is discouraging</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section-title reveal" id="iterate">
+  <div class="eyebrow">06</div>
+  <h2>Iterate</h2>
+</div>
+
+<div class="row reveal">
+  <div class="label">Test results</div>
+  <div class="content">
+    <p>The usability test results were summarized into key findings and conclusions. Most users preferred the minimal interface version for being clean and neat, yet still wanted to see certain useful information about their message. The final design became a hybrid of both minimal and extended versions — clean and uncluttered, while allowing users to reveal additional elements following the principles of <a class="btn-text" style="border:none;padding:0;" href="https://www.nngroup.com/articles/progressive-disclosure/" target="_blank" rel="noopener">Progressive Disclosure</a>.</p>
+  </div>
+</div>
+
+<div class="row reveal">
+  <div class="label">Final design</div>
+  <div class="content">
+    <figure style="margin:0;">
+      <div class="frame"><img src="https://cdn.prod.website-files.com/622387faca9a232611ffaea9/62388ec99aaf70064f54fccf_Frame%2021.png" alt="Final design of the browser extension"></div>
+    </figure>
+  </div>
+</div>
+
+<div class="contact reveal" id="contact">
+  <div class="contact-inner">
+    <h2>Want to work together?</h2>
+    <p>If you like what you see and want to work together, get in touch.</p>
+    <a class="email-btn" href="mailto:alise.loginova27@gmail.com">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+      alise.loginova27@gmail.com
+    </a>
+  </div>
+</div>
+
+<footer>
+  <span>Alise Loginova © 2026<br>All Rights Reserved</span>
+  <a href="https://www.linkedin.com/in/aliseloginova/" target="_blank" rel="noopener">
+    <img src="https://cdn.prod.website-files.com/622387faca9a232611ffaea9/62275659bbccc968285bf871_linkedin.svg" alt="LinkedIn">
+  </a>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>
+  // Highlights the current stage in the process-track as its section scrolls into view.
+  document.addEventListener('DOMContentLoaded', function () {
+    var stages = ['discover', 'define', 'ideate', 'design', 'test', 'iterate'];
+    var links = document.querySelectorAll('.process-track a');
+    var sections = stages.map(function (id) { return document.getElementById(id); }).filter(Boolean);
+
+    if (!sections.length || !links.length || !('IntersectionObserver' in window)) return;
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          links.forEach(function (link) {
+            link.classList.toggle('current', link.getAttribute('data-stage') === entry.target.id);
+          });
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+
+    sections.forEach(function (section) { observer.observe(section); });
+  });
+</script>
+</body>
+</html>
