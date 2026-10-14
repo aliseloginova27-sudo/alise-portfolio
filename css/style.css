@@ -324,7 +324,7 @@ ul.plain-list li{
 .sub-label{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:12px;text-transform:none;letter-spacing:0;}
 
 .row figure{margin:26px 0 0;}
-.persona-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px;}
+.persona-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px;margin-bottom:14px;}
 .image-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px;}
 
 /* ---------- CALLOUT CARD ---------- */
