@@ -294,6 +294,13 @@ ul.plain-list li{
   font-style:italic;
 }
 
+.list ul {list-style:none;margin:16px 0 0;padding:0;font-size:14.5px;color:var(--ink-soft);}
+.list ul li{padding-left:16px;position:relative;margin-bottom:9px;}
+.list ul li::before{
+  content:"";position:absolute;left:0;top:9px;
+  width:4px;height:4px;border-radius:50%;background:var(--accent);
+}
+
 /* ---------- LABEL + CONTENT ROW ---------- */
 .row{
   max-width:var(--max);
